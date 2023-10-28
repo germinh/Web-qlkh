@@ -30,11 +30,11 @@
                     <div class="form-group">
                         <a href="{% url 'password_change' %}">Change Password</a>
                         <hr>
-                        <label class="small mb-1">Change Avatar:</label>
-                        {{ profile_form.avatar }}
-                    </div>
+                        {% comment %} <label class="small mb-1">Change Avatar:</label>
+                        {{ profile_form.avatar }} {% endcomment %}
+                    {% comment %} </div>
                     <label class="small mb-1">Bio:</label> {{ profile_form.bio }}
-                </div>
+                </div> {% endcomment %}
             </div>
             <br><br>
             <button type="submit" class="btn btn-dark btn-lg">Save Changes</button>
