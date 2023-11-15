@@ -3,7 +3,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% block title %}Lesson Create {% endblock %}
+{% block title %}Tạo bài học{% endblock %}
 
 {% block image_block %}
 <header class="info-header">
@@ -11,12 +11,12 @@
     <div class="row d-flex justify-content-center text-center">
       <div class="col-md-10 text-white">
         <!-- heading -->
-        <h2 class="display-4 font-weight-bold  p-5 " style="color:#ff5722;" > Lesson Creation </h2>
+        <h2 class="display-4 font-weight-bold  p-5 " style="color:#ff5722;" >Tạo bài học</h2>
         <div class="row d-flex justify-content-center text-center">
           <ul class="breadcrumb">
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'curriculum:standard_list' %}">Curriculum</a></li>
-            <li class="disabled-text" >Lesson Create</li>
+            <li><a href="{% url 'index' %}">Trang chủ</a></li>
+            <li><a href="{% url 'curriculum:standard_list' %}">Khóa học</a></li>
+            <li class="disabled-text" >Tạo bài học</li>
           </ul>
         </div>
 

@@ -11,8 +11,8 @@
         <h2 class="display-4 font-weight-bold  p-5 " style="color:#ff5722;" > {{subjects.name}} </h2>
         <div class="row d-flex justify-content-center text-center">
           <ul class="breadcrumb">
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'curriculum:standard_list' %}">Curriculum</a></li>
+            <li><a href="{% url 'index' %}">Trang chủ</a></li>
+            <li><a href="{% url 'curriculum:standard_list' %}">Khóa học</a></li>
             <li><a href="{% url 'curriculum:subject_list' slug=subjects.standard.slug %}">{{subjects.standard}}</a></li>
             <li class="disabled-text" >{{subjects.name}}</li>
           </ul>
