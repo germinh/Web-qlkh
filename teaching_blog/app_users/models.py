@@ -18,6 +18,7 @@ class user_profile(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     id= models.IntegerField(max_length=10,primary_key=True,default=1)
+    
 
     #adding additional attributes
     bio = models.CharField(max_length=500)
