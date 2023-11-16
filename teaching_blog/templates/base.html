@@ -6,7 +6,7 @@
     <title>{%block title%}{%endblock%}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/master_css.css' %}">
-
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </head>
   <body>
     <!-- navigation bar -->
@@ -20,7 +20,7 @@
                       <div class="collapse navbar-collapse" id="basicExampleNav" >
                         <ul class=" navbar-nav  mr-auto smooth-scroll " >
                                 <li class="nav-item">
-                                   <a class="nav-link" href="{% url 'curriculum:standard_list' %}">Khóa học</a>
+                                   <a class="nav-link" href="{% url 'curriculum:standard_list' %}">Lĩnh vực</a>
                                 </li>
                                 {% if user.is_superuser %}
                                 <li class="nav-item ">
@@ -62,15 +62,18 @@
       <div class="container">
         <div class="row mt-4">
                   <div class="col-md-4 mt-4">
-                            <h3>Về chúng tôi</h3> <br>
-                            <p>Học hỏi qua...</p>
+                            <h3>Thông tin</h3> <br>
+                            <p>Học theo dự án khoa học</p>
                   </div>
                   <div class="col-md-4 mt-4">
                             <h3>Những thông tin khác</h3>
                             <ul>
-                              <li>Item 1</li>
-                              <li>Item 2</li>
-                              <li>Item 3</li>
+                              <div>
+                                <box-icon type='logo' name='gmail'></box-icon>
+                                <box-icon name='meta' type='logo' ></box-icon>
+                                <box-icon name='instagram' type='logo' ></box-icon>
+                                <box-icon name='youtube' type='logo' ></box-icon>
+                              </div>
                             </ul>
                   </div>
                   <div class="col-md-4 mt-4">

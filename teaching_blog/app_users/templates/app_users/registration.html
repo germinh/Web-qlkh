@@ -21,7 +21,7 @@
         <hr style="color:#ff5722;">
 
         <!-- description -->
-        <h4 class="white-text my-4">Bắt đầu tạo tài khoản và chuẩn bị sách chuột vào học thôi~.</h4>
+        <h4 class="white-text my-4">Bắt đầu tạo tài khoản khóa học </h4>
   </div>
 </header>
 {% endblock %}
@@ -34,9 +34,7 @@
               <!-- class row for description-->
               <div class="row d-flex justify-content-center mb-4">
                 <!-- class column -->
-                <div class="col-md-8">
-                  <p class="grey-text">Tạo 1 tài khoản mới qua form sau.</p>
-                </div>
+                
               </div>
               <div class="row d-flex justify-content-center mb-4">
 
@@ -46,7 +44,7 @@
   {% if registered %}
     <h1>Cảm ơn bạn vì đã đăng ký.</h1>
   {% else %}
-      <h3>Điền vào form sau...</h3>
+      
       <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ user_form|crispy }}
