@@ -12,6 +12,9 @@ header,
     -o-background-size: cover;
     background-size: cover;
 }
+.text-center{
+  text-align:center ;
+}
 
 
 .bg-light{

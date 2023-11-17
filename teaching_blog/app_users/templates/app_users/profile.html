@@ -35,11 +35,15 @@
               <div class="col-sm-9">
                 <div class="row">
                   <div class="col-8 col-sm-6">
-                    Username:  {{request.user.username}}
+                    Tên Đăng Nhập:  {{request.user.username}}
                     <br>
-                    Ho va ten: {{request.user.first_name}} {{request.user.last_name}} 
+                    Họ và Tên: {{request.user.last_name}} {{request.user.first_name}}  
                     <br>
-                    Email: {{request.user.user_type}}
+                    Email: {{request.user.email}}
+                    <br>
+                    Bio: {{request.user.Bio}}
+                    <br>                    
+                    Loại tài khoản: {{request.user.user_type}}
                     <br>
                   </div>
                 </div>
