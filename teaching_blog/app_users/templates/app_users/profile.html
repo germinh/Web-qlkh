@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block image_block %}
+<header class="info-header">
+  <div id="page-intro" class="container-fluid d-flex align-items-center justify-content-center ">
+    <div class="row d-flex justify-content-center text-center">
+      <div class="col-md-10 text-white">
+        <!-- heading -->
+        <h1 class="font-weight-bold  p-5 " style="color:#ff5722;" >Hồ sơ</h1>
+        <div class="row d-flex justify-content-center text-center">
+          <ul class="breadcrumb">
+            <li><a href="{% url 'index' %}">Trang chủ</a></li>
+            <li class="disabled-text" >Hồ sơ</li>
+          </ul>
+        </div>
+
+        <!-- divider -->
+        <hr style="color:#ff5722;">
+
+        <!-- description -->
+        <h4 class="white-text my-4">Thông tin của bạn ở đây.</h4>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<form method="post" >
+    {% csrf_token %}
+    <section class=" mt-4">  
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="{% static 'Images/user_avatar.png' %}" alt="..." style="height: 200px; width: 200px; border-radius: 50%;">
+              </div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                    Tên Đăng Nhập:  {{request.user.username}}
+                    <br>
+                    Họ và Tên: {{request.user.last_name}} {{request.user.first_name}}  
+                    <br>
+                    Email: {{request.user.email}}
+                    <br>
+                    Bio: {{request.user.Bio}}
+                    <br>                    
+                    Loại tài khoản: {{request.user.user_type}}
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+    </section>
+</form>
+{%endblock%}
